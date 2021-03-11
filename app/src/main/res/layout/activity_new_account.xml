@@ -27,7 +27,7 @@
         android:layout_width="134dp"
         android:layout_height="38dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="casual"
         android:text="@string/password"
         android:textSize="24sp"
@@ -39,7 +39,7 @@
         android:layout_width="134dp"
         android:layout_height="38dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="casual"
         android:text="@string/password"
         android:textSize="24sp"
@@ -51,7 +51,7 @@
         android:layout_width="92dp"
         android:layout_height="44dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="casual"
         android:text="@string/e_mail"
         android:textSize="24sp"
@@ -60,24 +60,22 @@
 
     <EditText
         android:id="@+id/userNameInput"
-        android:layout_width="225dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="20dp"
+        android:layout_width="182dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="174dp"
+        android:layout_marginTop="270dp"
+        android:autofillHints=""
         android:ems="10"
         android:fontFamily="casual"
         android:hint="@string/puppylove123"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/firstName"
-        app:layout_constraintTop_toBottomOf="@+id/lastNameInput"
-        android:autofillHints="" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/firstName2"
-        android:layout_width="134dp"
-        android:layout_height="38dp"
+        android:layout_width="135dp"
+        android:layout_height="45dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="160dp"
         android:fontFamily="casual"
@@ -102,10 +100,10 @@
 
     <TextView
         android:id="@+id/lastName"
-        android:layout_width="134dp"
-        android:layout_height="38dp"
+        android:layout_width="130dp"
+        android:layout_height="45dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="casual"
         android:text="@string/last_name"
         android:textSize="24sp"
@@ -116,34 +114,36 @@
         android:id="@+id/userName"
         android:layout_width="134dp"
         android:layout_height="38dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="casual"
         android:text="@string/user_name"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lastName" />
 
     <EditText
         android:id="@+id/firstNameInput"
-        android:layout_width="225dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="152dp"
+        android:layout_width="203dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="160dp"
+        android:autofillHints=""
         android:ems="10"
         android:fontFamily="casual"
         android:hint="@string/spot"
         android:inputType="textPersonName"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.023"
         app:layout_constraintStart_toEndOf="@+id/lastName"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/lastNameInput"
-        android:layout_width="225dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="209dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints=""
         android:ems="10"
         android:fontFamily="casual"
         android:hint="@string/pupperson"
@@ -151,45 +151,59 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/lastName"
-        app:layout_constraintTop_toBottomOf="@+id/firstNameInput"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/firstNameInput" />
 
     <EditText
         android:id="@+id/emailInput"
         android:layout_width="270dp"
         android:layout_height="50dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/spotpupperson_pupmail_com"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.294"
         app:layout_constraintStart_toEndOf="@+id/email"
-        app:layout_constraintTop_toBottomOf="@+id/userNameInput"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/userNameInput" />
 
     <EditText
         android:id="@+id/passwordOneInput"
-        android:layout_width="225dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="209dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/pawprints"
         android:inputType="textPassword"
         app:layout_constraintStart_toEndOf="@+id/passwordOne"
-        app:layout_constraintTop_toBottomOf="@+id/emailInput"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/emailInput" />
+
+    <EditText
+        android:id="@+id/passwordOneInput2"
+        android:layout_width="175dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/pawprints"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toEndOf="@+id/passwordOne"
+        app:layout_constraintTop_toBottomOf="@+id/emailInput" />
 
     <EditText
         android:id="@+id/passwordTwoInput"
         android:layout_width="225dp"
         android:layout_height="55dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="584dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/pawprints"
         android:inputType="textPassword"
         app:layout_constraintStart_toEndOf="@+id/passwordTwo"
-        app:layout_constraintTop_toBottomOf="@+id/passwordOneInput"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordOneInput" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
