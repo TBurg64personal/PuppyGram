@@ -9,9 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
+
     private Button CreateNewButton;
-    private Button NewAccount;
-    private EditText fName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,14 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 openNewAccount();
             }
         });
-        NewAccount = (Button) findViewById(R.id.Submit);
-        NewAccount.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v) {
-                fName = (EditText)findViewById(R.id.firstNameInput);
-            }
-        });
+
     }
     public void openNewAccount()
     {
@@ -38,4 +31,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
 }
