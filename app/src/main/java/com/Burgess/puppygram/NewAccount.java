@@ -20,6 +20,14 @@ public class NewAccount extends AppCompatActivity {
     private Button NewAccount;
     private EditText fNameID;
     private EditText lNameID;
+    private EditText EmailID;
+    private EditText UserName;
+    private  EditText password;
+    private EditText password2;
+    private String Emails;
+    private String UserNames;
+    private String Password1;
+    private String Passwords;
     private String fname;
     private String lname;
     public Connection conn;
@@ -46,12 +54,22 @@ public class NewAccount extends AppCompatActivity {
 
         fNameID = (EditText)findViewById(R.id.firstNameInput);
         lNameID = (EditText)findViewById(R.id.lastNameInput);
+        EmailID = (EditText)findViewById(R.id.emailInput);
+        UserName = (EditText)findViewById(R.id.userNameInput);
+        password= (EditText)findViewById(R.id.passwordOneInput);
+        password2=(EditText)findViewById(R.id.passwordOneInput2);
+
         fname =fNameID.getText().toString();
         lname = lNameID.getText().toString();
+        Emails = EmailID.getText().toString();
+        UserNames= UserName.getText().toString();
+        Password1 = password.getText().toString();
+        Passwords = password2.getText().toString();
         try {
-            stmt = conn.createStatement();
-            String sql = "INSERT INTO AccountTable " + "VALUES ('" + fname +"' , '"+ lname+ "' , 'nlk34@uakron.edu', 'Uakron2019', 'noahkrill11')";
-            stmt.executeUpdate(sql);
+                stmt = conn.createStatement();
+                String sql = "INSERT INTO AccountTable " + "VALUES ('" + fname + "' , '" + lname + "' , '" + Emails +"' , '" +Passwords+"' , '" +UserNames+"')";
+                stmt.executeUpdate(sql);
+
         }
         catch (Exception e)
         {
