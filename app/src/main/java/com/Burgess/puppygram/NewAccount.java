@@ -23,6 +23,8 @@ public class NewAccount extends AppCompatActivity {
     private String fname;
     private String lname;
     public Connection conn;
+    private Statement stmt = null;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,16 @@ public class NewAccount extends AppCompatActivity {
         lNameID = (EditText)findViewById(R.id.lastNameInput);
         fname =fNameID.getText().toString();
         lname = lNameID.getText().toString();
+        try {
+            stmt = conn.createStatement();
+            String sql = "INSERT INTO AccountTable " + "VALUES ('" + fname +"' , '"+ lname+ "' , 'nlk34@uakron.edu', 'Uakron2019', 'noahkrill11')";
+            stmt.executeUpdate(sql);
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage()) ;
+        }
+
 
 
     }
