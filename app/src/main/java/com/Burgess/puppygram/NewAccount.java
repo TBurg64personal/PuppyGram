@@ -66,10 +66,11 @@ public class NewAccount extends AppCompatActivity {
         Password1 = password.getText().toString();
         Passwords = password2.getText().toString();
         try {
-                stmt = conn.createStatement();
-                String sql = "INSERT INTO AccountTable " + "VALUES ('" + fname + "' , '" + lname + "' , '" + Emails +"' , '" +Passwords+"' , '" +UserNames+"')";
-                stmt.executeUpdate(sql);
-
+                if(Password1.equals(Passwords)) {
+                    stmt = conn.createStatement();
+                    String sql = "INSERT INTO AccountTable " + "VALUES ('" + fname + "' , '" + lname + "' , '" + Emails + "' , '" + Passwords + "' , '" + UserNames + "')";
+                    stmt.executeUpdate(sql);
+                }
         }
         catch (Exception e)
         {
