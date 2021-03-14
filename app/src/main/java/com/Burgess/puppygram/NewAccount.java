@@ -32,6 +32,7 @@ public class NewAccount extends AppCompatActivity {
     private String lname;
     public Connection conn;
     private Statement stmt = null;
+    private boolean isAccount = false;
 
 
     @Override
@@ -51,7 +52,6 @@ public class NewAccount extends AppCompatActivity {
     public void createNewAccount()
     {
         conn = connectionClass();
-
         fNameID = (EditText)findViewById(R.id.firstNameInput);
         lNameID = (EditText)findViewById(R.id.lastNameInput);
         EmailID = (EditText)findViewById(R.id.emailInput);
@@ -66,19 +66,39 @@ public class NewAccount extends AppCompatActivity {
         Password1 = password.getText().toString();
         Passwords = password2.getText().toString();
         try {
-                if(Password1.equals(Passwords)) {
+            if(Password1.equals(Passwords)) {
+                isAccount = testEmail();
+                if (isAccount==false) {
                     stmt = conn.createStatement();
                     String sql = "INSERT INTO AccountTable " + "VALUES ('" + fname + "' , '" + lname + "' , '" + Emails + "' , '" + Passwords + "' , '" + UserNames + "')";
                     stmt.executeUpdate(sql);
                 }
+            }
         }
         catch (Exception e)
         {
             System.out.println(e.getMessage()) ;
         }
-
-
-
+    }
+    private boolean testEmail()
+    {
+        conn = connectionClass();
+        try {
+                stmt = conn.createStatement();
+                String sql = "SELECT COUNT(Email) FROM AccountTable " + "WHERE Email = '"+ Emails +"'";
+                ResultSet rs = stmt.executeQuery(sql);
+                rs.next();
+                int count = rs.getInt(1);
+                if(count==0)
+                {
+                    return false;
+                }
+            }
+        catch(Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+        return true;
     }
     public Connection connectionClass()
     {
@@ -90,13 +110,11 @@ public class NewAccount extends AppCompatActivity {
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
             ConnectionURL = "jdbc:jtds:sqlserver://puppygram.database.windows.net:1433;DatabaseName=Puppygram;user=Noahkrill@puppygram;password=Uakron2019;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;";
             connection = DriverManager.getConnection(ConnectionURL);
-
         }
         catch(Exception e)
         {
             System.out.println(e.getMessage());
         }
-
         return connection;
     }
 }
