@@ -16,4 +16,9 @@
     <string name="spotpupperson_pupmail_com">spotpupperson@pupmail.com</string>
     <string name="pawprints">pawprints</string>
     <string name="password">Password</string>
+    <string name="users_profile_picture">Users profile picture</string>
+    <string name="posts">Posts</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="zero">0</string>
 </resources>
