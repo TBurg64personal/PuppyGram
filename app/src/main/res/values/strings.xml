@@ -21,4 +21,5 @@
     <string name="followers">Followers</string>
     <string name="following">Following</string>
     <string name="zero">0</string>
+    <string name="profilename">ProfileName</string>
 </resources>

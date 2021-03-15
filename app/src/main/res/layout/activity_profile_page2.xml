@@ -21,6 +21,36 @@
         tools:srcCompat="@tools:sample/avatars[2]" />
 
     <TextView
+        android:id="@+id/numFollowersLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="@string/followers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePicture" />
+
+    <TextView
+        android:id="@+id/numPosts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toEndOf="@+id/numPostsLabel"
+        app:layout_constraintStart_toStartOf="@+id/numPostsLabel"
+        app:layout_constraintTop_toBottomOf="@+id/numPostsLabel" />
+
+    <TextView
+        android:id="@+id/numFollowing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toEndOf="@+id/numFollowingLabel"
+        app:layout_constraintStart_toStartOf="@+id/numFollowingLabel"
+        app:layout_constraintTop_toBottomOf="@+id/numFollowingLabel" />
+
+    <TextView
         android:id="@+id/numPostsLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,18 +58,19 @@
         android:text="@string/posts"
         app:layout_constraintBottom_toBottomOf="@+id/numFollowersLabel"
         app:layout_constraintEnd_toStartOf="@+id/numFollowersLabel"
-        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/numFollowersLabel"
+        android:id="@+id/numFollowers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="@string/followers"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profilePicture" />
+        android:layout_marginTop="4dp"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toEndOf="@+id/numFollowersLabel"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/numFollowersLabel"
+        app:layout_constraintTop_toBottomOf="@+id/numFollowersLabel" />
 
     <TextView
         android:id="@+id/numFollowingLabel"
@@ -49,57 +80,38 @@
         android:text="@string/following"
         app:layout_constraintBottom_toBottomOf="@+id/numFollowersLabel"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toEndOf="@+id/numFollowersLabel" />
-
-    <TextView
-        android:id="@+id/numPosts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/zero"
-        app:layout_constraintEnd_toEndOf="@+id/numPostsLabel"
-        app:layout_constraintStart_toStartOf="@+id/numPostsLabel"
-        app:layout_constraintTop_toBottomOf="@+id/numPostsLabel" />
-
-    <TextView
-        android:id="@+id/numFollowers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/zero"
-        app:layout_constraintEnd_toEndOf="@+id/numFollowersLabel"
-        app:layout_constraintStart_toStartOf="@+id/numFollowersLabel"
-        app:layout_constraintTop_toBottomOf="@+id/numFollowersLabel" />
-
-    <TextView
-        android:id="@+id/numFollowing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/zero"
-        app:layout_constraintEnd_toEndOf="@+id/numFollowingLabel"
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toStartOf="@+id/numFollowingLabel"
-        app:layout_constraintTop_toBottomOf="@+id/numFollowingLabel" />
 
     <GridView
         android:id="@+id/gridview"
         android:layout_width="350dp"
-        android:layout_height="450dp"
+        android:layout_height="395dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:columnWidth="90dp"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="10dp"
-        android:horizontalSpacing="10dp"
-        android:stretchMode="columnWidth"
         android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numFollowers" />
+        app:layout_constraintTop_toBottomOf="@+id/numFollowers"
+        app:layout_constraintVertical_bias="0.741" />
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/profilename"
+        app:layout_constraintBottom_toTopOf="@+id/numFollowersLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePicture" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
