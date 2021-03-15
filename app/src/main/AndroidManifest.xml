@@ -14,7 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PuppyGram">
-        <activity android:name=".ProfilePage" android:exported="true"/>
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.PuppyGram.NoActionBar"></activity>
+        <activity
+            android:name=".ProfilePage"
+            android:exported="true" />
         <activity android:name=".NewAccount" />
         <activity android:name=".MainActivity">
             <intent-filter>
