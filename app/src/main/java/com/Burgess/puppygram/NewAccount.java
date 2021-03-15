@@ -33,7 +33,7 @@ public class NewAccount extends AppCompatActivity {
     public Connection conn;
     private Statement stmt = null;
     private boolean isAccount = false;
-
+    private boolean isUserName = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,7 +68,8 @@ public class NewAccount extends AppCompatActivity {
         try {
             if(Password1.equals(Passwords)) {
                 isAccount = testEmail();
-                if (isAccount==false) {
+                isUserName = testUserName();
+                if (isAccount==false && isUserName==false ) {
                     stmt = conn.createStatement();
                     String sql = "INSERT INTO AccountTable " + "VALUES ('" + fname + "' , '" + lname + "' , '" + Emails + "' , '" + Passwords + "' , '" + UserNames + "')";
                     stmt.executeUpdate(sql);
@@ -80,6 +81,27 @@ public class NewAccount extends AppCompatActivity {
             System.out.println(e.getMessage()) ;
         }
     }
+    private boolean testUserName()
+    {
+        conn = connectionClass();
+        try {
+            stmt = conn.createStatement();
+            String sql = "SELECT COUNT(Username) FROM AccountTable " + "WHERE Username = '"+ UserNames +"'";
+            ResultSet rs = stmt.executeQuery(sql);
+            rs.next();
+            int count = rs.getInt(1);
+            if(count==0)
+            {
+                return false;
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+        return true;
+    }
+
     private boolean testEmail()
     {
         conn = connectionClass();
