@@ -15,7 +15,6 @@
     <string name="puppylove123">PuppyLove123</string>
     <string name="spotpupperson_pupmail_com">spotpupperson@pupmail.com</string>
     <string name="pawprints">pawprints</string>
-    <string name="password">Password</string>
     <string name="users_profile_picture">Users profile picture</string>
     <string name="posts">Posts</string>
     <string name="followers">Followers</string>
@@ -31,4 +30,9 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="please_enter_your_login_information_below">Please enter your login information below</string>
+    <string name="please_provide_your_information_on_this_page">Please provide your information on this page</string>
+    <string name="forgot_password">Forgot Password?</string>
 </resources>
