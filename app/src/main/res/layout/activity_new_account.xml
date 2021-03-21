@@ -113,7 +113,7 @@
         android:fontFamily="casual"
         android:text="@string/welcome_to"
         android:textAlignment="center"
-        android:textColor="#AB000000"
+        android:textColor="#262827"
         android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
