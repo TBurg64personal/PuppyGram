@@ -5,7 +5,7 @@
     android:id="@+id/newPost"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#54FFEB3B"
+    android:background="#4012A9BD"
     android:fontFamily="casual"
     tools:context=".ProfilePage">
 

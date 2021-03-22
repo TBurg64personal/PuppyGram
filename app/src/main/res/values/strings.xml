@@ -31,6 +31,21 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="please_enter_your_login_information_below">Please enter your login information below</string>
+    <string name="please_provide_your_information_on_this_page">Please provide your information on this page</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="this_page_will_ask_you_about_your_pets_you_would_like_to_include_on_your_account_please_provide_your_information">This page will ask you about your pets you would like to include on your account. Please provide your information.</string>
+    <string name="welcome_to_your_new_account">Welcome to Your New Account!</string>
+    <string name="this_page_will_ask_you_about_the_pets_you_would_like_to_include_on_your_account_please_provide_your_information_below">This page will ask you about the pets you would like to include on your account. Please provide your information below</string>
+    <string name="what_kind_of_animals_do_you_have">What kind of animals do you have?</string>
+    <string name="dog">Dog</string>
+    <string name="live_stock">Live stock</string>
+    <string name="rodent">Rodent</string>
+    <string name="fish">Fish</string>
+    <string name="cat">Cat</string>
+    <string name="bird">Bird</string>
     <string name="picture_to_upload">picture to upload</string>
     <string name="post">Post</string>
     <string name="upload_from_gallery">Upload from Gallery</string>
