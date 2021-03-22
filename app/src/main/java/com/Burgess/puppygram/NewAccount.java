@@ -2,6 +2,7 @@ package com.Burgess.puppygram;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.icu.text.SymbolTable;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -80,6 +81,8 @@ public class NewAccount extends AppCompatActivity {
         {
             System.out.println(e.getMessage()) ;
         }
+        Intent intent = new Intent(this, new_account2.class);
+        startActivity(intent);
     }
     private boolean testUserName()
     {
