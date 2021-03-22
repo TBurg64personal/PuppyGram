@@ -1,5 +1,6 @@
 package com.Burgess.puppygram;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -27,6 +28,7 @@ public class Login extends AppCompatActivity {
     }
     public void CheckAccount()
     {
-
+        Intent intent = new Intent(this, ProfilePage.class);
+        startActivity(intent);
     }
 }
