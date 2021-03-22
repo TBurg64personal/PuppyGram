@@ -45,4 +45,5 @@
     <string name="fish">Fish</string>
     <string name="cat">Cat</string>
     <string name="bird">Bird</string>
+    <string name="login">Login</string>
 </resources>
