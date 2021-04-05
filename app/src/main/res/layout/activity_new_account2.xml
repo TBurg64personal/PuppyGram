@@ -7,47 +7,21 @@
     android:background="#4012A9BD"
     tools:context=".new_account2" >
 
-    <SeekBar
-        android:id="@+id/birdSeek2"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="150dp"
+    <EditText
+        android:id="@+id/catAmount"
+        android:layout_width="105dp"
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
-        android:max="5"
-        android:progress="0"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/birdBox"
-        app:layout_constraintTop_toBottomOf="@+id/fishSeek" />
-
-    <SeekBar
-        android:id="@+id/fishSeek"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="150dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="4dp"
-        android:max="5"
-        android:progress="0"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/fishBox"
-        app:layout_constraintTop_toBottomOf="@+id/catSeek" />
-
-    <SeekBar
-        android:id="@+id/catSeek"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="150dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="4dp"
-        android:max="5"
-        android:progress="0"
-        android:visibility="visible"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:hint="@string/_0"
+        android:inputType="number"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/catBox"
-        app:layout_constraintTop_toBottomOf="@+id/dogSeek" />
+        app:layout_constraintTop_toBottomOf="@+id/dogAmount"
+        android:autofillHints="" />
 
     <CheckBox
         android:id="@+id/birdBox"
@@ -57,8 +31,9 @@
         android:fontFamily="casual"
         android:text="@string/bird"
         android:textColor="#AB000000"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.353"
+        app:layout_constraintHorizontal_bias="0.295"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fishBox" />
 
@@ -70,8 +45,9 @@
         android:fontFamily="casual"
         android:text="@string/live_stock"
         android:textColor="#AB000000"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.353"
+        app:layout_constraintHorizontal_bias="0.295"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rodentBox" />
 
@@ -83,8 +59,9 @@
         android:fontFamily="casual"
         android:text="@string/rodent"
         android:textColor="#AB000000"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.353"
+        app:layout_constraintHorizontal_bias="0.295"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/birdBox" />
 
@@ -96,8 +73,9 @@
         android:fontFamily="casual"
         android:text="@string/fish"
         android:textColor="#AB000000"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.353"
+        app:layout_constraintHorizontal_bias="0.295"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/catBox" />
 
@@ -110,7 +88,7 @@
         android:text="@string/cat"
         android:textColor="#AB000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.353"
+        app:layout_constraintHorizontal_bias="0.295"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dogBox" />
 
@@ -164,12 +142,13 @@
         android:id="@+id/dogBox"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:fontFamily="casual"
         android:text="@string/dog"
         android:textColor="#AB000000"
         android:textColorHighlight="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.353"
+        app:layout_constraintHorizontal_bias="0.295"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -186,17 +165,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="?attr/homeAsUpIndicator" />
 
-    <SeekBar
-        android:id="@+id/dogSeek"
-        style="@style/Widget.AppCompat.SeekBar.Discrete"
-        android:layout_width="150dp"
+    <EditText
+        android:id="@+id/dogAmount"
+        android:layout_width="105dp"
         android:layout_height="48dp"
-        android:max="5"
-        android:progress="0"
-        android:visibility="visible"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:fontFamily="casual"
+        android:hint="@string/_0"
+        android:inputType="number"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/dogBox"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        android:autofillHints="" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
