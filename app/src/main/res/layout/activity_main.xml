@@ -27,15 +27,15 @@
         android:id="@+id/newAccount"
         android:layout_width="250dp"
         android:layout_height="75dp"
-        android:layout_marginTop="490dp"
+        android:layout_marginBottom="24dp"
         android:color="#6B3D0F"
         android:fontFamily="casual"
         android:text="@string/create_new_account"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/logIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/logIn"
