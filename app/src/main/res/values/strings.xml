@@ -34,7 +34,6 @@
     <string name="username">Username</string>
     <string name="please_enter_your_login_information_below">Please enter your login information below</string>
     <string name="please_provide_your_information_on_this_page">Please provide your information on this page</string>
-    <string name="forgot_password">Forgot Password?</string>
     <string name="this_page_will_ask_you_about_your_pets_you_would_like_to_include_on_your_account_please_provide_your_information">This page will ask you about your pets you would like to include on your account. Please provide your information.</string>
     <string name="welcome_to_your_new_account">Welcome to Your New Account!</string>
     <string name="this_page_will_ask_you_about_the_pets_you_would_like_to_include_on_your_account_please_provide_your_information_below">This page will ask you about the pets you would like to include on your account. Please provide your information below</string>
@@ -50,4 +49,10 @@
     <string name="upload_from_gallery">Upload from Gallery</string>
     <string name="create_new_post">Create new post</string>
     <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="please_provide_your_information_to_verify_that_it_is_you">Please provide your information to verify that it is you.</string>
+    <string name="your_username_here">Your username here</string>
+    <string name="your_email_here">Your email here</string>
+    <string name="oops_didn_t_mean_to_come_here"><![CDATA[<- Oops, didn\'t mean to come here]]></string>
+    <string name="verify_my_info">Verify my info</string>
 </resources>
