@@ -55,4 +55,9 @@
     <string name="your_email_here">Your email here</string>
     <string name="verify_my_info">Verify my info</string>
     <string name="oops_didn_t_mean_to_come_here"><![CDATA[<- Oops, didn\'t mean to come here]]></string>
+    <string name="success">Success!</string>
+    <string name="now_that_your_information_is_verified_you_are_now_able_to_create_a_new_password_for_your_account">Now that your information is verified, you are now able to create a new password for your account</string>
+    <string name="new_password">New password</string>
+    <string name="re_enter_password">Re-enter password</string>
+    <string name="back_to_login">Back to Login</string>
 </resources>
