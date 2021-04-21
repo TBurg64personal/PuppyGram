@@ -6,6 +6,13 @@
     <uses-permission android:name="andriod.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="andriod.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="andriod.permission.READ_PHONE_STATE" />
+    <!--Declaring the required permissions-->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -27,7 +34,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

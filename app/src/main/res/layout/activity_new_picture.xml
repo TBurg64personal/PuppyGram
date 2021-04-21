@@ -1,46 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#54FFEB3B"
-    android:fontFamily="casual"
-    tools:context=".NewPicture">
-
-    <Button
-        android:id="@+id/upload"
-        android:layout_width="147dp"
-        android:layout_height="74dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="104dp"
-        android:text="@string/upload_from_gallery"
-        app:layout_constraintEnd_toStartOf="@+id/post"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newPost" />
-
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
     <ImageView
-        android:id="@+id/newPost"
-        android:layout_width="330dp"
-        android:layout_height="319dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="88dp"
-        android:layout_marginEnd="8dp"
-        android:contentDescription="@string/picture_to_upload"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/app_icon" />
-
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
     <Button
-        android:id="@+id/post"
+        android:id="@+id/buttonLoadPicture"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
-        android:layout_marginEnd="80dp"
-        android:text="@string/post"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newPost" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_weight="0"
+        android:text="@string/load_picture"
+        android:layout_gravity="center"/>
+</LinearLayout>

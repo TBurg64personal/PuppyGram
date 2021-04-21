@@ -50,4 +50,5 @@
     <string name="upload_from_gallery">Upload from Gallery</string>
     <string name="create_new_post">Create new post</string>
     <string name="login">Login</string>
+    <string name="load_picture">Load Picture</string>
 </resources>
