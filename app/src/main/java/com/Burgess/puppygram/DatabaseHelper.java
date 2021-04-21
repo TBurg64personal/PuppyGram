@@ -2,6 +2,7 @@ package com.Burgess.puppygram;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.nfc.Tag;
@@ -56,6 +57,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return  false;
         else
             return true;
+
+
+    }
+    public int selectResult(String Username, String Password)
+    {
+        //SQLiteDatabase db = this.getReadableDatabase();
+        //String count = String.format("SELECT * FROM Accounts WHERE %s = %s AND %s = %s", COL6,Username, COL5, Password);
+       // Cursor courser = db.rawQuery(count,new String[] { String.valueOf(Username) });
+        //int val = courser.getInt(0);
+        return 1;
+
+
+
 
 
     }

@@ -30,10 +30,6 @@ public class NewAccount extends AppCompatActivity {
     private String Passwords;
     private String fname;
     private String lname;
-    public Connection conn;
-    private Statement stmt = null;
-    private boolean isAccount = false;
-    private boolean isUserName = false;
     DatabaseHelper DatabaseHelp1;
 
 

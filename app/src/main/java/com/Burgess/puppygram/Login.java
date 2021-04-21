@@ -11,14 +11,23 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
     private Button loginButton;
+    DatabaseHelper helper1;
+    EditText user;
+    EditText Pass;
+
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.content_login);
         loginButton = (Button) findViewById(R.id.logIn2);
+        helper1 = new DatabaseHelper(this);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,7 +37,11 @@ public class Login extends AppCompatActivity {
     }
     public void CheckAccount()
     {
-        Intent intent = new Intent(this, ProfilePage.class);
-        startActivity(intent);
+
+
+    }
+    private void toastMessage(String message)
+    {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }
