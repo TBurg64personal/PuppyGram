@@ -7,7 +7,7 @@ import java.io.File;
 public class pictureClass {
     boolean upload()
     {
-        String img = "C://dog.jpg";
+        String img = "sdcard/Download/dog.jpg";
         File temp = new File (img);
         boolean exists = temp.exists();
         return exists;
