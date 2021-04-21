@@ -67,11 +67,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
        // Cursor courser = db.rawQuery(count,new String[] { String.valueOf(Username) });
         //int val = courser.getInt(0);
         return 1;
-
-
-
-
-
     }
+
 
 }
