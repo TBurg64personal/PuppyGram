@@ -10,9 +10,9 @@ import androidx.annotation.Nullable;
 
 public class DatabaseHelper2 extends SQLiteOpenHelper {
     private static final String TAG = "DatabaseHelper";
-    private static final String TABLE_NAME = "Images";
+    private static final String TABLE_NAME = "Images2";
     private static final String COL1 = "ID";
-    private static final String COL2 = "blob";
+    private static final String COL2 = "Image";
 
     public DatabaseHelper2(@Nullable Context context) {
     super(context, TABLE_NAME, null, 1);
@@ -21,7 +21,7 @@ public class DatabaseHelper2 extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createTable = "CREATE TABLE " +TABLE_NAME +" (ID INTEGER PRIMARY KEY AUTOINCREMENT, "+
-                COL2 + " BLOB NOT NULL )";
+                COL2 + " TEXT NOT NULL )";
         db.execSQL(createTable);
 
     }
@@ -38,7 +38,6 @@ public class DatabaseHelper2 extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentvals = new ContentValues();
         contentvals.put(COL2, blob);
-
 
         Log.d(TAG, "Adding Data ");
         long result= db.insert(TABLE_NAME, null, contentvals);

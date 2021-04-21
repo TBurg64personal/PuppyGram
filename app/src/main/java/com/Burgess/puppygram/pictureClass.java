@@ -5,10 +5,10 @@ import android.widget.Toast;
 import java.io.File;
 
 public class pictureClass {
-    boolean upload()
+    boolean upload(String name)
     {
-        String img = "sdcard/Download/dog.jpg";
-        File temp = new File (img);
+
+        File temp = new File (name);
         boolean exists = temp.exists();
         return exists;
 
