@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     private Button LoginButton;
     private Button picture;
     pictureClass picture2;
-    DatabaseHelper2 database;
 
 
     @Override
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        database = new DatabaseHelper2(this);
+        //database = new DatabaseHelper2(this);
         CreateNewButton =(Button) findViewById(R.id.newAccount);
         LoginButton = (Button) findViewById(R.id.logIn);
         picture = (Button) findViewById(R.id.Upload);
@@ -53,10 +52,6 @@ public class MainActivity extends AppCompatActivity {
                pictures();
             }
         });
-
-
-
-
     }
     public void openNewAccount()
     {
@@ -74,8 +69,8 @@ public class MainActivity extends AppCompatActivity {
       boolean file = picture2.upload(img);
       //String found = Boolean.toString(file);
       if(file==true) {
-          boolean val = database.addData(img);
-          toastMessage(Boolean.toString(val));
+         // boolean val = database.addData(img);
+         // toastMessage(Boolean.toString(val));
       }
 
 
