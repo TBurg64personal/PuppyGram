@@ -135,7 +135,5 @@ public class DatabaseHelper {
             count = count +100000;
         }
         return (count);
-
     }
-
 }

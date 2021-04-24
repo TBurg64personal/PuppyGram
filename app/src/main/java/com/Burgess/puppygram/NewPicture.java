@@ -15,7 +15,7 @@ public class NewPicture extends AppCompatActivity {
     Button Upload;
     // One Preview Image
     ImageView IVPreviewImage;
-    DatabaseHelper2 db;
+    //DatabaseHelper2 db;
     // constant to compare
     // the activity result code
     int SELECT_PICTURE = 200;
@@ -44,7 +44,7 @@ public class NewPicture extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String path = selectedImageUri.getPath();
-                db.addData(path);
+                //db.addData(path);
                 startActivity(new Intent(NewPicture.this, ProfilePage.class));
             }
         });
