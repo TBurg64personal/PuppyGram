@@ -138,4 +138,19 @@ public class DatabaseHelper {
 
     }
 
+    void addNewPicture(String path, String user) {
+
+        conn = connectionClass();
+
+        try {
+                stmt = conn.createStatement();
+                String sql = "INSERT INTO Picture " + "VALUES ('" + path + "' , '" + user + "')";
+                stmt.executeUpdate(sql);
+            }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage()) ;
+        }
+    }
+
 }
