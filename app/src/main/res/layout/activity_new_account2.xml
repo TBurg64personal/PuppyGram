@@ -7,22 +7,6 @@
     android:background="#4012A9BD"
     tools:context=".new_account2" >
 
-    <EditText
-        android:id="@+id/catAmount"
-        android:layout_width="105dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:fontFamily="casual"
-        android:hint="@string/_0"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/catBox"
-        app:layout_constraintTop_toBottomOf="@+id/dogAmount"
-        android:autofillHints="" />
-
     <CheckBox
         android:id="@+id/birdBox"
         android:layout_width="100dp"
@@ -31,9 +15,9 @@
         android:fontFamily="casual"
         android:text="@string/bird"
         android:textColor="#AB000000"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fishBox" />
 
@@ -45,9 +29,9 @@
         android:fontFamily="casual"
         android:text="@string/live_stock"
         android:textColor="#AB000000"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rodentBox" />
 
@@ -59,9 +43,9 @@
         android:fontFamily="casual"
         android:text="@string/rodent"
         android:textColor="#AB000000"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/birdBox" />
 
@@ -73,9 +57,9 @@
         android:fontFamily="casual"
         android:text="@string/fish"
         android:textColor="#AB000000"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/catBox" />
 
@@ -88,7 +72,7 @@
         android:text="@string/cat"
         android:textColor="#AB000000"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dogBox" />
 
@@ -148,37 +132,18 @@
         android:textColor="#AB000000"
         android:textColorHighlight="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-    <ImageButton
+    <Button
         android:id="@+id/next1"
-        android:layout_width="62dp"
-        android:layout_height="59dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="28dp"
-        android:background="#4012A9BD"
-        android:contentDescription="@string/todo"
-        android:rotation="180"
+        android:text="->"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="?attr/homeAsUpIndicator" />
-
-    <EditText
-        android:id="@+id/dogAmount"
-        android:layout_width="105dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:fontFamily="casual"
-        android:hint="@string/_0"
-        android:inputType="number"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/dogBox"
-        app:layout_constraintTop_toBottomOf="@+id/textView7"
-        android:autofillHints="" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
