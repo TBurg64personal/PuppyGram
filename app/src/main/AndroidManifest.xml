@@ -5,7 +5,12 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="andriod.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="andriod.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="andriod.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="andriod.permission.READ_PHONE_STATE" /> <!-- Declaring the required permissions -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -14,9 +19,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PuppyGram">
-        <activity android:name=".new_account_w_dog"></activity>
+        <activity android:name=".forgot_password2" />
+        <activity android:name=".forgot_password1" />
         <activity android:name=".NewPicture" />
         <activity android:name=".new_account2" />
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/Theme.PuppyGram.NoActionBar"></activity>
         <activity
             android:name=".Login"
             android:label="@string/title_activity_login"
