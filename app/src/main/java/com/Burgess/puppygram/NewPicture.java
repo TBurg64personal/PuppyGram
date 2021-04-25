@@ -16,7 +16,6 @@ public class NewPicture extends AppCompatActivity {
     Button Upload;
     // One Preview Image
     ImageView IVPreviewImage;
-    DatabaseHelper db;
     // constant to compare
     // the activity result code
     int SELECT_PICTURE = 200;

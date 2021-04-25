@@ -18,6 +18,7 @@ import java.sql.SQLException;
 
 public class Login extends AppCompatActivity {
     private Button loginButton;
+    private Button forgotButton;
     DatabaseHelper helper1;
     EditText user;
     EditText Pass;
@@ -33,6 +34,7 @@ public class Login extends AppCompatActivity {
         user = (EditText)findViewById(R.id.userNameLog);
         Pass =(EditText)findViewById(R.id.PasswordLog);
         loginButton = (Button) findViewById(R.id.logIn2);
+        forgotButton = (Button) findViewById(R.id.forgotPass);
         helper1 = new DatabaseHelper();
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +46,14 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+        forgotButton.setOnClickListener(new View.OnClickListener()
+        {
+           @Override
+           public void onClick(View v)
+           {
+               goToPassword();
+           }
+        });
     }
     public void CheckAccount() throws SQLException {
         int find=0;
@@ -53,6 +63,10 @@ public class Login extends AppCompatActivity {
           if(find==1)
           {
               toastMessage("Found the account");
+              Intent I = new Intent(this, ProfilePage.class);
+              I.putExtra("Username", UserString);
+              startActivity(I);
+
           }
           else
           {
@@ -63,4 +77,10 @@ public class Login extends AppCompatActivity {
     {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
+    public void goToPassword()
+    {
+        Intent intent = new Intent(this, forgot_password1.class);
+        startActivity(intent);
+    }
+
 }
