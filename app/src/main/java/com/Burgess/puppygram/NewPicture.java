@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import java.io.File;
+
 public class NewPicture extends AppCompatActivity {
 
     // One Button
@@ -16,11 +18,12 @@ public class NewPicture extends AppCompatActivity {
     Button Upload;
     // One Preview Image
     ImageView IVPreviewImage;
+    DatabaseHelper db;
     // constant to compare
     // the activity result code
     int SELECT_PICTURE = 200;
 
-    Uri selectedImageUri;
+    public Uri selectedImageUri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,13 +36,16 @@ public class NewPicture extends AppCompatActivity {
         Upload = findViewById(R.id.Upload);
         // handle the Choose Image button to trigger
         // the image chooser function
-        BSelectImage.setOnClickListener(v -> imageChooser());
+        BSelectImage.setOnClickListener(v -> {
+            imageChooser();
+        });
 
         Upload.setOnClickListener(v -> {
-            String path = selectedImageUri.getPath();
+            File file = new File(selectedImageUri.getPath());
             db = new DatabaseHelper();
             // TODO: Add current user
-            db.addNewPicture(path, "clt94");
+            System.out.println(file.getName());
+            db.addNewPicture("/storage/emulated/0/Download/" + file.getName(), "clt94");
             startActivity(new Intent(NewPicture.this, ProfilePage.class));
         });
     }

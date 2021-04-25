@@ -1,24 +1,19 @@
 package com.Burgess.puppygram;
 
-import android.content.ContentValues;
-import android.content.Context;
-import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
-import android.nfc.Tag;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.StrictMode;
-import android.util.Log;
 import android.widget.EditText;
-import android.widget.TableRow;
 
-import androidx.annotation.Nullable;
-
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 public class DatabaseHelper {
     private String Emails;
@@ -48,7 +43,7 @@ public class DatabaseHelper {
             if(Password.equals(Password2)) {
                 isAccount = testEmail();
                 isUserName = testUserName();
-                if (isAccount==false && isUserName==false ) {
+                if (!isAccount && isUserName==false ) {
                     stmt = conn.createStatement();
                     String sql = "INSERT INTO AccountTable " + "VALUES ('" + fname + "' , '" + lname + "' , '" + Emails + "' , '" + Password + "' , '" + UserNames + "')";
                     stmt.executeUpdate(sql);
@@ -207,14 +202,34 @@ public class DatabaseHelper {
         conn = connectionClass();
 
         try {
-                stmt = conn.createStatement();
-                String sql = "INSERT INTO Picture " + "VALUES ('" + path + "' , '" + user + "')";
-                stmt.executeUpdate(sql);
-            }
+            stmt = conn.createStatement();
+            String sql = "INSERT INTO Picture " + "VALUES ('" + path + "' , '" + user + "')";
+            stmt.executeUpdate(sql);
+        }
         catch (Exception e)
         {
             System.out.println(e.getMessage()) ;
         }
     }
 
+    ArrayList<String> getUserImages(String user) {
+        conn = connectionClass();
+        ArrayList<String> listData = new ArrayList<>();
+        try {
+            stmt = conn.createStatement();
+            String query = "SELECT PictureIMG FROM Picture WHERE Username = '" + user + "'";
+            ResultSet data = stmt.executeQuery(query);
+            while (data.next())
+            {
+                String path = data.getString("PictureIMG");
+                listData.add(path);
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+
+        return listData;
+    }
 }
