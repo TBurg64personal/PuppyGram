@@ -19,8 +19,6 @@ public class MainActivity extends AppCompatActivity {
 
     private Button CreateNewButton;
     private Button LoginButton;
-    private Button picture;
-    pictureClass picture2;
 
 
     @Override
@@ -31,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
         //database = new DatabaseHelper2(this);
         CreateNewButton =(Button) findViewById(R.id.newAccount);
         LoginButton = (Button) findViewById(R.id.logIn);
-        picture = (Button) findViewById(R.id.Upload);
-        picture2 = new pictureClass();
 
         CreateNewButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,12 +40,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 logintonew();
-            }
-        });
-        picture.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               pictures();
             }
         });
     }
@@ -64,21 +54,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Login.class );
         startActivity(intent);
     }
-    public void pictures()
-    { String img = "sdcard/Download/dog.jpg";
-      boolean file = picture2.upload(img);
-      //String found = Boolean.toString(file);
-      if(file==true) {
-         // boolean val = database.addData(img);
-         // toastMessage(Boolean.toString(val));
-      }
-
-
-    }
-    private void toastMessage(String message)
-    {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
-    }
-
-
 }
