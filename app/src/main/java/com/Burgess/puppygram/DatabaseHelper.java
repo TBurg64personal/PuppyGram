@@ -173,6 +173,33 @@ public class DatabaseHelper {
 
         }
     }
+    void setNull(String Username)
+    {
+        conn = connectionClass();
+        try
+        {
+            stmt = conn.createStatement();
+            String sql = "Insert INTO Animals" + " VALUES ('" +Username+"', 'f', 'f', 'f', 'f', 'f', 'f')";
+            stmt.executeQuery(sql);
+        }
+        catch (Exception e)
+        {
 
+        }
+    }
+    void updateAnimal(String Username,String Animal)
+    {
+        conn = connectionClass();
+        try
+        {
+            stmt = conn.createStatement();
+            String sql = "UPDATE Animals SET "+Animal+" = t WHERE Username = '"+Username+"'";
+            stmt.executeQuery(sql);
+        }
+        catch (Exception e)
+        {
+
+        }
+    }
 
 }
