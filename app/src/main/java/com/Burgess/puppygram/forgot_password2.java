@@ -40,7 +40,7 @@ public class forgot_password2 extends AppCompatActivity {
     public void backToLogin()
     {
 
-        data.changePassword(Password1.toString(), Password2.toString(), Email);
+        data.changePassword(Password1.getText().toString(), Password2.getText().toString(), Email);
         //Intent intent = new Intent(this, Login.class );
         //startActivity(intent);
     }

@@ -16,6 +16,7 @@ import androidx.annotation.Nullable;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -164,9 +165,11 @@ public class DatabaseHelper {
         conn = connectionClass();
         try
         {
-        stmt = conn.createStatement();
-        String sql = "UPDATE AccountTable" + " SET Password = '" + pass1 + "'" + " WHERE Email = '" + Email + "'";
-        stmt.executeQuery(sql);
+            String sql = "UPDATE AccountTable SET Password = ? WHERE Email = ?";
+            PreparedStatement st = conn.prepareStatement(sql);
+            st.setString(1,pass1);
+            st.setString(2,Email);
+            st.executeUpdate();
         }
         catch (Exception e)
         {
