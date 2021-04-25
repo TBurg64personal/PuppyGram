@@ -135,21 +135,70 @@ public class DatabaseHelper {
             count = count +100000;
         }
         return (count);
-
     }
-
-    void addNewPicture(String path, String user) {
-
+    Boolean checkAccountForResetPassword(String User, String Email)
+    {
+        int count =0;
         conn = connectionClass();
-
-        try {
-                stmt = conn.createStatement();
-                String sql = "INSERT INTO Picture " + "VALUES ('" + path + "' , '" + user + "')";
-                stmt.executeUpdate(sql);
+        try
+        {
+            stmt = conn.createStatement();
+            String sql = "SELECT COUNT(Username) FROM AccountTable" + " WHERE Username = '" + User + "'"+ " AND Email = '"+ Email+"'";
+            ResultSet rs = stmt.executeQuery(sql);
+            rs.next();
+            count = rs.getInt(1);
+            if(count==1)
+            {
+                return true;
             }
+        }
         catch (Exception e)
         {
-            System.out.println(e.getMessage()) ;
+
+        }
+        return false;
+    }
+    //Not finished quite yet
+    void changePassword(String pass1, String pass2, String Email)
+    {
+        conn = connectionClass();
+        try
+        {
+        stmt = conn.createStatement();
+        String sql = "UPDATE AccountTable" + " SET Password = '" + pass1 + "'" + " WHERE Email = '" + Email + "'";
+        stmt.executeQuery(sql);
+        }
+        catch (Exception e)
+        {
+
+        }
+    }
+    void setNull(String Username)
+    {
+        conn = connectionClass();
+        try
+        {
+            stmt = conn.createStatement();
+            String sql = "Insert INTO Animals" + " VALUES ('" +Username+"', 'f', 'f', 'f', 'f', 'f', 'f')";
+            stmt.executeQuery(sql);
+        }
+        catch (Exception e)
+        {
+
+        }
+    }
+    void updateAnimal(String Username,String Animal)
+    {
+        conn = connectionClass();
+        try
+        {
+            stmt = conn.createStatement();
+            String sql = "UPDATE Animals SET "+Animal+" = t WHERE Username = '"+Username+"'";
+            stmt.executeQuery(sql);
+        }
+        catch (Exception e)
+        {
+
         }
     }
 
