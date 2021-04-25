@@ -158,4 +158,21 @@ public class DatabaseHelper {
         }
         return false;
     }
+    //Not finished quite yet
+    void changePassword(String pass1, String pass2, String Email)
+    {
+        conn = connectionClass();
+        try
+        {
+        stmt = conn.createStatement();
+        String sql = "UPDATE AccountTable" + " SET Password = '" + pass1 + "'" + " WHERE Email = '" + Email + "'";
+        stmt.executeQuery(sql);
+        }
+        catch (Exception e)
+        {
+
+        }
+    }
+
+
 }

@@ -51,6 +51,7 @@ public class forgot_password1 extends AppCompatActivity {
         if(isAccount)
         {
             Intent intent = new Intent(this, forgot_password2.class);
+            intent.putExtra("Email",getEmail);
             startActivity(intent);
         }
         else
