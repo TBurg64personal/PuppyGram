@@ -136,4 +136,26 @@ public class DatabaseHelper {
         }
         return (count);
     }
+    Boolean checkAccountForResetPassword(String User, String Email)
+    {
+        int count =0;
+        conn = connectionClass();
+        try
+        {
+            stmt = conn.createStatement();
+            String sql = "SELECT COUNT(Username) FROM AccountTable" + " WHERE Username = '" + User + "'"+ " AND Email = '"+ Email+"'";
+            ResultSet rs = stmt.executeQuery(sql);
+            rs.next();
+            count = rs.getInt(1);
+            if(count==1)
+            {
+                return true;
+            }
+        }
+        catch (Exception e)
+        {
+
+        }
+        return false;
+    }
 }
