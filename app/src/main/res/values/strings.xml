@@ -34,7 +34,7 @@
     <string name="username">Username</string>
     <string name="please_enter_your_login_information_below">Please enter your login information below</string>
     <string name="please_provide_your_information_on_this_page">Please provide your information on this page</string>
-
+    <string name="forgot_password">Forgot Password?</string>
     <string name="this_page_will_ask_you_about_your_pets_you_would_like_to_include_on_your_account_please_provide_your_information">This page will ask you about your pets you would like to include on your account. Please provide your information.</string>
     <string name="welcome_to_your_new_account">Welcome to Your New Account!</string>
     <string name="this_page_will_ask_you_about_the_pets_you_would_like_to_include_on_your_account_please_provide_your_information_below">This page will ask you about the pets you would like to include on your account. Please provide your information below</string>
@@ -50,19 +50,7 @@
     <string name="upload_from_gallery">Upload from Gallery</string>
     <string name="create_new_post">Create new post</string>
     <string name="login">Login</string>
-    <string name="forgot_password">Forgot Password?</string>
-    <string name="please_provide_your_information_to_verify_that_it_is_you">Please provide your information to verify that it is you.</string>
-    <string name="your_username_here">Your username here</string>
-    <string name="your_email_here">Your email here</string>
-    <string name="verify_my_info">Verify my info</string>
-    <string name="oops_didn_t_mean_to_come_here"><![CDATA[<- Oops, didn\'t mean to come here]]></string>
-    <string name="success">Success!</string>
-    <string name="now_that_your_information_is_verified_you_are_now_able_to_create_a_new_password_for_your_account">Now that your information is verified, you are now able to create a new password for your account</string>
-    <string name="new_password">New password</string>
-    <string name="re_enter_password">Re-enter password</string>
-    <string name="back_to_login">Back to Login</string>
     <string name="load_picture">Load Picture</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string name="action_settings">Settings</string>
-    <string name="_0">0</string>
 </resources>

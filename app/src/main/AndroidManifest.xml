@@ -19,14 +19,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PuppyGram">
-        <activity android:name=".forgot_password2" />
-        <activity android:name=".forgot_password1" />
-        <activity android:name=".NewPicture" />
-        <activity android:name=".new_account2" />
         <activity
             android:name=".ScrollingActivity"
             android:label="@string/title_activity_scrolling"
             android:theme="@style/Theme.PuppyGram.NoActionBar"></activity>
+        <activity android:name=".NewPicture" />
+        <activity android:name=".new_account2" />
         <activity
             android:name=".Login"
             android:label="@string/title_activity_login"

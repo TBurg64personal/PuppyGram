@@ -47,10 +47,6 @@ public class NewAccount extends AppCompatActivity {
                 password= (EditText)findViewById(R.id.passwordOneInput);
                 password2=(EditText)findViewById(R.id.passwordOneInput2);
                 data.createNewAccount(fNameID,lNameID, EmailID, UserName, password, password2);
-                data.setNull(UserName.getText().toString());
-                Intent intent = new Intent(v.getContext(), new_account2.class);
-                intent.putExtra("Username", UserName.getText().toString());
-                startActivity(intent);
             }
         });
     }
