@@ -23,7 +23,7 @@ public class ProfilePage extends AppCompatActivity {
         Username = findViewById(R.id.profileName);
         Intent intent = getIntent();
         String Username2 = "";//intent.getExtras().getString("Username");
-        Username.setText(Username2);
+        //Username.setText(Username2);
         GridView gridview = findViewById(R.id.gridview);
         gridview.setAdapter(new ImageAdapter(this));
 
