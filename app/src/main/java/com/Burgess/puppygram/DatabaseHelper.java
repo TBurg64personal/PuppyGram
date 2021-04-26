@@ -267,7 +267,7 @@ public class DatabaseHelper {
         ArrayList<String> listData = new ArrayList<>();
         try {
             stmt = conn.createStatement();
-            String query = "SELECT PictureIMG FROM Picture WHERE Username = '" + user + "'";
+            String query = "SELECT PictureIMG FROM Picture WHERE Username = '" + user + "' ORDER BY ID DESC";
             ResultSet data = stmt.executeQuery(query);
             while (data.next())
             {
@@ -281,5 +281,47 @@ public class DatabaseHelper {
         }
 
         return listData;
+    }
+
+    ArrayList<String> getAllImages() {
+        conn = connectionClass();
+        ArrayList<String> listData = new ArrayList<>();
+        try {
+            stmt = conn.createStatement();
+            String query = "SELECT PictureIMG FROM Picture ORDER BY ID DESC";
+            ResultSet data = stmt.executeQuery(query);
+            while (data.next())
+            {
+                String path = data.getString("PictureIMG");
+                listData.add(path);
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+
+        return listData;
+    }
+
+    int getNumPosts(String user) {
+        conn = connectionClass();
+        int num = 0;
+        try {
+            stmt = conn.createStatement();
+            String query = "SELECT COUNT(Username) FROM Picture WHERE Username = '" + user + "'";
+            ResultSet data = stmt.executeQuery(query);
+            while (data.next())
+            {
+                num = data.getInt("(No column label)");
+            }
+            System.out.println(num);
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+
+        return num;
     }
 }
