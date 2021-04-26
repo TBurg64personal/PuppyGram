@@ -73,7 +73,7 @@ public class new_account2 extends AppCompatActivity {
     }
     void callLogin()
     {
-        Intent intent2 = new Intent(this, ProfilePage.class);
+        Intent intent2 = new Intent(this, MainFeed.class);
         intent2.putExtra("Username", Username);
         startActivity(intent2);
     }

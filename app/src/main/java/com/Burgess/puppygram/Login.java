@@ -63,7 +63,7 @@ public class Login extends AppCompatActivity {
           if(find==1)
           {
               toastMessage("Found the account");
-              Intent I = new Intent(this, ProfilePage.class);
+              Intent I = new Intent(this, MainFeed.class);
               I.putExtra("Username", UserString);
               startActivity(I);
 
