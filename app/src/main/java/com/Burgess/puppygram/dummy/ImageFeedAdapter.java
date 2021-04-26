@@ -25,16 +25,16 @@ import java.util.ArrayList;
 
 import androidx.loader.content.CursorLoader;
 
-public class ImageAdapter extends BaseAdapter {
+public class ImageFeedAdapter extends BaseAdapter {
     private Context mContext;
     DatabaseHelper db;
     // TODO: get current user
     private ArrayList<String> mThumbIds;
 
     // Constructor
-    public ImageAdapter(Context c) {
+    public ImageFeedAdapter(Context c) {
         db = new DatabaseHelper();
-        mThumbIds = new ArrayList<String>(db.getUserImages("clt94"));
+        mThumbIds = new ArrayList<String>(db.getAllImages());
         mContext = c;
     }
 
@@ -56,7 +56,7 @@ public class ImageAdapter extends BaseAdapter {
         ImageView imageView;
         if (convertView == null) {
             imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams(300, 300));
+            imageView.setLayoutParams(new GridView.LayoutParams(1000, 1000));
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setPadding(8, 8, 8, 8);
         }

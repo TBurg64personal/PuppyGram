@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.Burgess.puppygram">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -19,6 +20,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PuppyGram">
+        <activity
+            android:name=".MainFeed"
+            android:label="feed"
+            android:exported="true"/>
         <activity android:name=".forgot_password2" />
         <activity android:name=".forgot_password1" />
         <activity android:name=".NewPicture" />
