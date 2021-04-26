@@ -50,6 +50,7 @@ public class NewAccount extends AppCompatActivity {
                 data.setNull(UserName.getText().toString());
                 Intent intent = new Intent(v.getContext(), new_account2.class);
                 intent.putExtra("Username", UserName.getText().toString());
+
                 startActivity(intent);
             }
         });

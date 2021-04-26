@@ -34,6 +34,7 @@ public class new_account2 extends AppCompatActivity {
         data = new DatabaseHelper();
         Intent intent= getIntent();
         Username = intent.getExtras().getString("Username");
+
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +44,7 @@ public class new_account2 extends AppCompatActivity {
     }
     public void toAccount()
     {
+        //System.out.println(Username);
         if(dogbox.isChecked())
         {
             data.updateAnimal(Username, "Dog");
