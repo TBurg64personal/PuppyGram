@@ -19,6 +19,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 public class DatabaseHelper {
     private String Emails;
@@ -202,4 +203,39 @@ public class DatabaseHelper {
         }
     }
 
+    void addNewPicture(String path, String user) {
+
+        conn = connectionClass();
+
+        try {
+            stmt = conn.createStatement();
+            String sql = "INSERT INTO Picture " + "VALUES ('" + path + "' , '" + user + "')";
+            stmt.executeUpdate(sql);
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage()) ;
+        }
+    }
+
+    ArrayList<String> getUserImages(String user) {
+        conn = connectionClass();
+        ArrayList<String> listData = new ArrayList<>();
+        try {
+            stmt = conn.createStatement();
+            String query = "SELECT PictureIMG FROM Picture WHERE Username = '" + user + "'";
+            ResultSet data = stmt.executeQuery(query);
+            while (data.next())
+            {
+                String path = data.getString("PictureIMG");
+                listData.add(path);
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+
+        return listData;
+    }
 }
