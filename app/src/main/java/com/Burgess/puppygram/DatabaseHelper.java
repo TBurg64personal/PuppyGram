@@ -16,9 +16,11 @@ import androidx.annotation.Nullable;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 public class DatabaseHelper {
     private String Emails;
@@ -164,9 +166,11 @@ public class DatabaseHelper {
         conn = connectionClass();
         try
         {
-        stmt = conn.createStatement();
-        String sql = "UPDATE AccountTable" + " SET Password = '" + pass1 + "'" + " WHERE Email = '" + Email + "'";
-        stmt.executeQuery(sql);
+            String sql = "UPDATE AccountTable SET Password = ? WHERE Email = ?";
+            PreparedStatement st = conn.prepareStatement(sql);
+            st.setString(1,pass1);
+            st.setString(2,Email);
+            st.executeUpdate();
         }
         catch (Exception e)
         {
@@ -192,9 +196,50 @@ public class DatabaseHelper {
         conn = connectionClass();
         try
         {
-            stmt = conn.createStatement();
-            String sql = "UPDATE Animals SET "+Animal+" = t WHERE Username = '"+Username+"'";
-            stmt.executeQuery(sql);
+            String sql;
+            if(Animal=="Dog") {
+                sql = "UPDATE Animals SET Dog = ? WHERE Username = ?";
+                PreparedStatement st = conn.prepareStatement(sql);
+                st.setString(2, Username);
+                st.setString(1, "t");
+                st.executeUpdate();
+            }
+            if(Animal=="Cat") {
+                sql = "UPDATE Animals SET Cat = ? WHERE Username = ?";
+                PreparedStatement st = conn.prepareStatement(sql);
+                st.setString(2, Username);
+                st.setString(1, "t");
+                st.executeUpdate();
+            }
+            if(Animal=="fish") {
+                sql = "UPDATE Animals SET fish = ? WHERE Username = ?";
+                PreparedStatement st = conn.prepareStatement(sql);
+                st.setString(2, Username);
+                st.setString(1, "t");
+                st.executeUpdate();
+            }
+            if(Animal=="bird") {
+                sql = "UPDATE Animals SET bird = ? WHERE Username = ?";
+                PreparedStatement st = conn.prepareStatement(sql);
+                st.setString(2, Username);
+                st.setString(1, "t");
+                st.executeUpdate();
+            }
+            if(Animal=="Rodent") {
+                sql = "UPDATE Animals SET Rodent = ? WHERE Username = ?";
+                PreparedStatement st = conn.prepareStatement(sql);
+                st.setString(2, Username);
+                st.setString(1, "t");
+                st.executeUpdate();
+            }
+            if(Animal=="LiveStock") {
+                sql = "UPDATE Animals SET LiveStock = ? WHERE Username = ?";
+                PreparedStatement st = conn.prepareStatement(sql);
+                st.setString(2, Username);
+                st.setString(1, "t");
+                st.executeUpdate();
+            }
+
         }
         catch (Exception e)
         {
@@ -202,4 +247,39 @@ public class DatabaseHelper {
         }
     }
 
+    void addNewPicture(String path, String user) {
+
+        conn = connectionClass();
+
+        try {
+            stmt = conn.createStatement();
+            String sql = "INSERT INTO Picture " + "VALUES ('" + path + "' , '" + user + "')";
+            stmt.executeUpdate(sql);
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage()) ;
+        }
+    }
+
+    ArrayList<String> getUserImages(String user) {
+        conn = connectionClass();
+        ArrayList<String> listData = new ArrayList<>();
+        try {
+            stmt = conn.createStatement();
+            String query = "SELECT PictureIMG FROM Picture WHERE Username = '" + user + "'";
+            ResultSet data = stmt.executeQuery(query);
+            while (data.next())
+            {
+                String path = data.getString("PictureIMG");
+                listData.add(path);
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getMessage());
+        }
+
+        return listData;
+    }
 }
