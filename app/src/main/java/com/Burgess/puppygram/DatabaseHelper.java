@@ -267,7 +267,7 @@ public class DatabaseHelper {
         ArrayList<String> listData = new ArrayList<>();
         try {
             stmt = conn.createStatement();
-            String query = "SELECT PictureIMG FROM Picture WHERE Username = '" + user + "'";
+            String query = "SELECT PictureIMG FROM Picture WHERE Username = '" + user + "' ORDER BY ID DESC";
             ResultSet data = stmt.executeQuery(query);
             while (data.next())
             {
