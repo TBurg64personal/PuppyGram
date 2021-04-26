@@ -30,6 +30,7 @@ public class ProfilePage extends AppCompatActivity {
         Button btn = (Button)findViewById(R.id.newPic);
 
         btn.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ProfilePage.this, NewPicture.class));
