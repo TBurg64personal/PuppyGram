@@ -27,13 +27,21 @@ public class ProfilePage extends AppCompatActivity {
         GridView gridview = findViewById(R.id.gridview);
         gridview.setAdapter(new ImageAdapter(this));
 
-        Button btn = (Button)findViewById(R.id.newPic);
-
-        btn.setOnClickListener(new View.OnClickListener() {
+        Button btn1 = (Button)findViewById(R.id.newPic);
+        btn1.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ProfilePage.this, NewPicture.class));
+            }
+        });
+
+        Button btn2 = (Button)findViewById(R.id.feedButton);
+        btn2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ProfilePage.this, MainFeed.class));
             }
         });
     }

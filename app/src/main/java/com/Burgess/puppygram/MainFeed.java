@@ -28,7 +28,7 @@ public class MainFeed extends AppCompatActivity {
         });
 
         Button btn2 = (Button)findViewById(R.id.profileButton);
-        btn1.setOnClickListener(new View.OnClickListener() {
+        btn2.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
