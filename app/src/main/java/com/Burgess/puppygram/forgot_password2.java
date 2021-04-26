@@ -41,8 +41,8 @@ public class forgot_password2 extends AppCompatActivity {
     {
 
         data.changePassword(Password1.getText().toString(), Password2.getText().toString(), Email);
-        //Intent intent = new Intent(this, Login.class );
-        //startActivity(intent);
+        Intent intent = new Intent(this, Login.class );
+        startActivity(intent);
     }
     private void toastMessage(String message)
     {

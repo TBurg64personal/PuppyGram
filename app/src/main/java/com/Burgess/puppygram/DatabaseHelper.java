@@ -195,9 +195,50 @@ public class DatabaseHelper {
         conn = connectionClass();
         try
         {
-            stmt = conn.createStatement();
-            String sql = "UPDATE Animals SET "+Animal+" = t WHERE Username = '"+Username+"'";
-            stmt.executeQuery(sql);
+            String sql;
+            if(Animal=="Dog") {
+                sql = "UPDATE Animals SET Dog = ? WHERE Username = ?";
+                PreparedStatement st = conn.prepareStatement(sql);
+                st.setString(2, Username);
+                st.setString(1, "t");
+                st.executeUpdate();
+            }
+            if(Animal=="Cat") {
+                sql = "UPDATE Animals SET Cat = ? WHERE Username = ?";
+                PreparedStatement st = conn.prepareStatement(sql);
+                st.setString(2, Username);
+                st.setString(1, "t");
+                st.executeUpdate();
+            }
+            if(Animal=="fish") {
+                sql = "UPDATE Animals SET fish = ? WHERE Username = ?";
+                PreparedStatement st = conn.prepareStatement(sql);
+                st.setString(2, Username);
+                st.setString(1, "t");
+                st.executeUpdate();
+            }
+            if(Animal=="bird") {
+                sql = "UPDATE Animals SET bird = ? WHERE Username = ?";
+                PreparedStatement st = conn.prepareStatement(sql);
+                st.setString(2, Username);
+                st.setString(1, "t");
+                st.executeUpdate();
+            }
+            if(Animal=="Rodent") {
+                sql = "UPDATE Animals SET Rodent = ? WHERE Username = ?";
+                PreparedStatement st = conn.prepareStatement(sql);
+                st.setString(2, Username);
+                st.setString(1, "t");
+                st.executeUpdate();
+            }
+            if(Animal=="LiveStock") {
+                sql = "UPDATE Animals SET LiveStock = ? WHERE Username = ?";
+                PreparedStatement st = conn.prepareStatement(sql);
+                st.setString(2, Username);
+                st.setString(1, "t");
+                st.executeUpdate();
+            }
+
         }
         catch (Exception e)
         {
