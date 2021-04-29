@@ -154,4 +154,5 @@
     </string>
     <string name="action_settings">Settings</string>
     <string name="_0">0</string>
+    <string name="title_activity_find_account">FindAccount</string>
 </resources>

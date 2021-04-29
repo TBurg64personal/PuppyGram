@@ -21,9 +21,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PuppyGram">
         <activity
+            android:name=".FindAccount"
+            android:label="@string/title_activity_find_account"
+            android:theme="@style/Theme.PuppyGram.NoActionBar"></activity>
+        <activity
             android:name=".MainFeed"
-            android:label="feed"
-            android:exported="true"/>
+            android:exported="true"
+            android:label="feed" />
         <activity android:name=".forgot_password2" />
         <activity android:name=".forgot_password1" />
         <activity android:name=".NewPicture" />

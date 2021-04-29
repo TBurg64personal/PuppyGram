@@ -8,15 +8,24 @@ import android.widget.GridView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.sql.SQLException;
+
 public class MainFeed extends AppCompatActivity {
+    private Button findAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_feed);
-
+        findAccount= findViewById(R.id.findAccount);
         GridView gridview = findViewById(R.id.gridview);
         gridview.setAdapter(new com.Burgess.puppygram.ImageFeedAdapter(this));
+        findAccount.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v) {
+                startActivity(new Intent(MainFeed.this, FindAccount.class));
+        }
+        });
 
         Button btn1 = (Button)findViewById(R.id.newPic);
         btn1.setOnClickListener(new View.OnClickListener() {
